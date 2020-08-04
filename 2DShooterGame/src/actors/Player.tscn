@@ -13,7 +13,12 @@ speed = Vector2( 12000, 12000 )
 sprint_boost = Vector2( 5000, 5000 )
 
 [node name="Sprite" type="Sprite" parent="."]
+rotation = 1.5708
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 1 )
+
+[node name="GunPosition" type="Position2D" parent="."]
+position = Vector2( 100, 0 )
+scale = Vector2( -42107, 11293.4 )
