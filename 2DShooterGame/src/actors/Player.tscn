@@ -20,5 +20,5 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="GunPosition" type="Position2D" parent="."]
-position = Vector2( 100, 0 )
+position = Vector2( 120, 0 )
 scale = Vector2( -42107, 11293.4 )

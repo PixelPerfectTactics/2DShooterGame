@@ -26,6 +26,6 @@ func _input(event: InputEvent) -> void:
 			for body in bodies:
 				if body.collision_layer == 1:
 					picked_up = true
-					player = get_node("../../Player")
+					player = body
 		elif picked_up == true:
 			picked_up = false
