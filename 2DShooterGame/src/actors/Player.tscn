@@ -9,7 +9,8 @@ extents = Vector2( 64, 64 )
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
 script = ExtResource( 1 )
-speed = Vector2( 5000, 5000 )
+speed = Vector2( 12000, 12000 )
+sprint_boost = Vector2( 5000, 5000 )
 
 [node name="Sprite" type="Sprite" parent="."]
 texture = ExtResource( 2 )
