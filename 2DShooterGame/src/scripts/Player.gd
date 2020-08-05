@@ -35,4 +35,4 @@ func get_rotation() -> float:
 	var dx = mouse_pos.x - global_position.x
 	var dy = mouse_pos.y - global_position.y
 	var angle = atan2(dy, dx)
-	return angle
+	return angle + deg2rad(90)
