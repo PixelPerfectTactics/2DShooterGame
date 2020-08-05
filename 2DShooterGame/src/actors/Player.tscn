@@ -4,11 +4,12 @@
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://src/fonts/NameTag.tres" type="DynamicFont" id=3]
 
-[sub_resource type="RectangleShape2D" id=2]
+[sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 64, 64 )
 
 [node name="Player" type="KinematicBody2D"]
 scale = Vector2( 0.5, 0.5 )
+collision_mask = 4
 script = ExtResource( 1 )
 speed = Vector2( 12000, 12000 )
 sprint_boost = Vector2( 5000, 5000 )
@@ -17,7 +18,7 @@ sprint_boost = Vector2( 5000, 5000 )
 texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource( 2 )
+shape = SubResource( 1 )
 
 [node name="GunPosition" type="Position2D" parent="."]
 position = Vector2( 0, -150 )
