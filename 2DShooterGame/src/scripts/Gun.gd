@@ -9,6 +9,7 @@ func fire_bullet() -> void:
 	fire_velocity.x = cos(player.global_rotation - deg2rad(90))
 	fire_velocity.y = sin(player.global_rotation - deg2rad(90))
 	fire_velocity *= bullet_speed
+	fire_velocity += player.velocity
 	
 	var bullet = bullet_scene.instance()
 	bullet.linear_velocity = fire_velocity
