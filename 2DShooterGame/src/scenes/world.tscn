@@ -6,10 +6,7 @@
 [node name="world" type="Node2D"]
 
 [node name="Gun" parent="." instance=ExtResource( 1 )]
-position = Vector2( 293.882, 163.621 )
-collision_layer = 2
-gravity_scale = 0.0
+position = Vector2( 216.554, 116.446 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 456, 263 )
-speed = null
+position = Vector2( 319.255, 192.694 )

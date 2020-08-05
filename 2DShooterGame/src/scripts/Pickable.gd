@@ -1,3 +1,4 @@
+class_name Pickable
 extends RigidBody2D
 
 var player: KinematicBody2D
@@ -10,7 +11,6 @@ func _ready() -> void:
 
 
 func _physics_process(delta: float) -> void:
-	print(picked_up)
 	if picked_up:
 		global_position = player.get_node("GunPosition").global_position
 		global_rotation = player.global_rotation + deg2rad(90)
