@@ -3,14 +3,12 @@ extends KinematicBody2D
 export var speed: Vector2
 export var sprint_boost: Vector2
 var velocity: Vector2 = Vector2(0, 0)
+onready var name_tag = get_node("NameTag")
 
-
-func _ready() -> void:
-	print("ready")
-	
 
 func _physics_process(delta: float) -> void:
 	global_rotation = get_rotation()
+	name_tag.set_rotation(-global_rotation)
 	
 	velocity = calculate_velocity(speed, sprint_boost) * delta
 	velocity = move_and_slide(velocity, Vector2.ZERO)
