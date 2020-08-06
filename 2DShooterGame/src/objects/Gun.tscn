@@ -16,7 +16,7 @@ gravity_scale = 0.0
 linear_damp = 10.0
 angular_damp = 10.0
 script = ExtResource( 1 )
-bullet_speed = Vector2( 500, 500 )
+bullet_speed = Vector2( 1000, 1000 )
 
 [node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.1, 0.1 )
