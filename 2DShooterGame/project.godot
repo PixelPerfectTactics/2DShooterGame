@@ -24,6 +24,11 @@ config/name="2DShooterGame"
 run/main_scene="res://src/scenes/world.tscn"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=1204
+window/size/height=720
+
 [input]
 
 up={
