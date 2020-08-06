@@ -10,9 +10,14 @@ func fire_bullet() -> void:
 	fire_velocity.y = sin(player.global_rotation - deg2rad(90))
 	fire_velocity *= bullet_speed
 	
+	var start_pos: Vector2 = global_position
+	var offset: float = 30.0
+	start_pos.x += cos(player.global_rotation - deg2rad(90)) * offset
+	start_pos.y += sin(player.global_rotation - deg2rad(90)) * offset
+	
 	var bullet = bullet_scene.instance()
 	bullet.linear_velocity = fire_velocity
-	bullet.global_position = global_position
+	bullet.global_position = start_pos
 	bullet.gravity_scale = 0
 	bullet.global_rotation = player.global_rotation
 	
