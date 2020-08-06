@@ -11,6 +11,9 @@ extents = Vector2( 64, 64 )
 scale = Vector2( 0.5, 0.5 )
 collision_mask = 4
 script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
 speed = Vector2( 12000, 12000 )
 sprint_boost = Vector2( 5000, 5000 )
 
@@ -26,10 +29,12 @@ rotation = -3.14159
 scale = Vector2( 42107, -11293.4 )
 
 [node name="NameTag" type="Label" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
 margin_left = -128.0
-margin_top = -16.0
+margin_top = -128.0
 margin_right = 128.0
-margin_bottom = 16.0
+margin_bottom = -96.0
 grow_horizontal = 2
 grow_vertical = 2
 rect_min_size = Vector2( 256, 32 )
@@ -38,3 +43,6 @@ custom_fonts/font = ExtResource( 3 )
 text = "Player Name"
 align = 1
 valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

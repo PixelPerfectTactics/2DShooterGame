@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://src/ui/ui assets/ui_healthbar1.png" type="Texture" id=1]
+
+[node name="HealthBar" type="TextureProgress"]
+margin_left = 64.0
+margin_top = 960.0
+margin_right = 414.0
+margin_bottom = 1010.0
+texture_under = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

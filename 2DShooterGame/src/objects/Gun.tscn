@@ -26,7 +26,6 @@ texture = ExtResource( 2 )
 shape = SubResource( 1 )
 
 [node name="PickUpDetector" type="Area2D" parent="."]
-editor/display_folded = true
 visible = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PickUpDetector"]

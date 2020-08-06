@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://src/objects/Gun.tscn" type="PackedScene" id=1]
 [ext_resource path="res://src/actors/Player.tscn" type="PackedScene" id=2]
+[ext_resource path="res://src/ui/ui scenes/HealthBar.tscn" type="PackedScene" id=3]
 
 [node name="world" type="Node2D"]
 
 [node name="Gun" parent="." instance=ExtResource( 1 )]
-position = Vector2( 216.554, 116.446 )
+position = Vector2( 544, 448 )
 
 [node name="Player" parent="." instance=ExtResource( 2 )]
-position = Vector2( 319.255, 192.694 )
+position = Vector2( 832, 576 )
+
+[node name="HealthBar" parent="." instance=ExtResource( 3 )]
