@@ -9,6 +9,7 @@ func fire_bullet() -> void:
 	fire_velocity.x = cos(player.global_rotation - deg2rad(90))
 	fire_velocity.y = sin(player.global_rotation - deg2rad(90))
 	fire_velocity *= bullet_speed
+	fire_velocity += player.velocity
 	
 	var start_pos: Vector2 = global_position
 	var offset: float = 30.0
@@ -20,6 +21,7 @@ func fire_bullet() -> void:
 	bullet.global_position = start_pos
 	bullet.gravity_scale = 0
 	bullet.global_rotation = player.global_rotation
+	bullet.z_index = -1
 	
 	get_node("..").add_child(bullet)
 
