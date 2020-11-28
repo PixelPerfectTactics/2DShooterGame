@@ -29,3 +29,4 @@ func fire_bullet() -> void:
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("shoot") and picked_up == true:
 		fire_bullet()
+		Input.start_joy_vibration(0, 1, 1, 0.4)

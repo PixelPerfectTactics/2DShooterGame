@@ -3,6 +3,8 @@ extends KinematicBody2D
 export var speed: Vector2
 export var sprint_boost: Vector2
 var velocity: Vector2 = Vector2(0, 0)
+var is_controller_connected = false
+var controller_deadzone = 0.04
 onready var name_tag = get_node("NameTag")
 
 
@@ -12,6 +14,10 @@ func _physics_process(delta: float) -> void:
 	
 	velocity = calculate_velocity(speed, sprint_boost) * delta
 	velocity = move_and_slide(velocity, Vector2.ZERO)
+	
+	
+func _input(event):
+	is_controller_connected = (event is InputEventJoypadMotion or event is InputEventJoypadButton)
 
 
 func calculate_velocity(spd, boost) -> Vector2:
@@ -29,8 +35,16 @@ func calculate_velocity(spd, boost) -> Vector2:
 
 
 func get_rotation() -> float:
-	var mouse_pos = get_global_mouse_position()
-	var dx = mouse_pos.x - global_position.x
-	var dy = mouse_pos.y - global_position.y
-	var angle = atan2(dy, dx)
+	var angle: float = self.global_rotation - deg2rad(90)
+	
+	if is_controller_connected:
+		var direction = Vector2(Input.get_joy_axis(0, 2), Input.get_joy_axis(0, 3))
+		
+		if abs(direction.x) > controller_deadzone and abs(direction.y) > controller_deadzone:
+			angle = direction.angle()
+	else:
+		var mouse_pos = get_global_mouse_position()
+		var dx = mouse_pos.x - global_position.x
+		var dy = mouse_pos.y - global_position.y
+		angle = atan2(dy, dx)
 	return angle + deg2rad(90)
